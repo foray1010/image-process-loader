@@ -13,6 +13,7 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint .",
+    "np": "np",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "pre-commit": [
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "eslint-config-foray1010": "^3.0.0",
+    "np": "^2.12.0",
     "sharp": "^0.17.2"
   }
 }
