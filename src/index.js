@@ -2,13 +2,17 @@
 
 const coWrapper = require('./lib/coWrapper')
 const processImage = require('./lib/processImage')
+const loaderUtils = require('loader-utils')
 
 const loader = coWrapper(function* (content) {
+  let query;
   if (typeof this.query === 'string') {
-    throw new Error('does not support inline querystring as options, define your options in webpack.config.js instead')
+    query = loaderUtils.parseQuery(this.query)
+  } else {
+    query = this.query
   }
 
-  const sharpInstance = processImage(content, this.query)
+  const sharpInstance = processImage(content, query)
 
   return yield sharpInstance.toBuffer()
 })
