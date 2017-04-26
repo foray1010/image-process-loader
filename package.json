@@ -23,7 +23,8 @@
     "sharp": "^0.17.2"
   },
   "dependencies": {
-    "co": "^4.6.0"
+    "co": "^4.6.0",
+    "loader-utils": "^1.1.0"
   },
   "devDependencies": {
     "eslint-config-foray1010": "^3.0.0",
