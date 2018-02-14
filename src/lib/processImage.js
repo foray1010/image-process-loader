@@ -9,11 +9,21 @@ module.exports = (content, query) => {
         throw new Error(`Method "${methodName}" is undefined`)
       }
 
-      const params = (
+      const paramsBefore = (
         Array.isArray(query[methodName]) ?
           query[methodName] :
           [query[methodName]]
       )
+
+      const params = paramsBefore.map((key) => {
+        var parsed = parseInt(key)
+        if (Number.isNaN(parsed)) {
+          return key
+        } else {
+          return parsed
+        }
+      })
+
       return sharpInstance[methodName](...params)
     }, sharp(content))
 }
