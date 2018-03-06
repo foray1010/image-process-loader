@@ -4,10 +4,10 @@ const coWrapper = require('./lib/coWrapper')
 const processImage = require('./lib/processImage')
 const loaderUtils = require('loader-utils')
 
-const loader = coWrapper(function* (content) {
+const loader = coWrapper(function* loader(content) {
   const globalOptions = loaderUtils.getOptions(this);
   const resourceOptions = loaderUtils.parseQuery(this.resourceQuery || "?")
-  let presetOptionsList = [];
+  let presetOptionsList = []
 
   // We have 2 possible choices:
   // - set of presets in `presets`

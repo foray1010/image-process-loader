@@ -1,7 +1,9 @@
 # image-process-loader
 
-```
+```sh
 npm install --save-dev image-process-loader sharp
+# or
+yarn add -D image-process-loader sharp
 ```
 
 Image process loader for webpack, powered by [sharp](https://github.com/lovell/sharp)
