@@ -2,7 +2,7 @@
   "name": "image-process-loader",
   "version": "0.1.1",
   "engines": {
-    "node": ">=6.9"
+    "node": ">=8.9"
   },
   "description": "Image process loader for webpack",
   "license": "MIT",
@@ -16,9 +16,6 @@
   },
   "peerDependencies": {
     "sharp": "*"
-  },
-  "dependencies": {
-    "co": "^4.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",

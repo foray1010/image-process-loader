@@ -1,16 +1,18 @@
 'use strict'
 
-const coWrapper = require('./lib/coWrapper')
+const asyncWrapper = require('./lib/asyncWrapper')
 const processImage = require('./lib/processImage')
 
-const loader = coWrapper(function* loader(content) {
+const loader = asyncWrapper(async function loader(content) {
   if (typeof this.query === 'string') {
-    throw new Error('does not support inline querystring as options, define your options in webpack.config.js instead')
+    throw new Error(
+      'does not support inline querystring as options, define your options in webpack.config.js instead'
+    )
   }
 
   const sharpInstance = processImage(content, this.query)
-
-  return yield sharpInstance.toBuffer()
+  const result = await sharpInstance.toBuffer()
+  return result
 })
 loader.raw = true
 
