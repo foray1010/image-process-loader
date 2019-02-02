@@ -12,6 +12,7 @@
   "bugs": "https://github.com/foray1010/image-process-loader/issues",
   "main": "src/index.js",
   "scripts": {
+    "ci": "yarn lint",
     "lint": "eslint ."
   },
   "peerDependencies": {

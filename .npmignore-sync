@@ -6,5 +6,4 @@ Global/Windows.gitignore
 
 [inline]
 .*
-circle.yml
 yarn.lock
