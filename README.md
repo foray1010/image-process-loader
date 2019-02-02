@@ -190,3 +190,54 @@ module.exports = {
   }
 }
 ```
+
+## Use preset(s) and inline query params
+
+```js
+/* webpack.config.js */
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(gif|jpe?g|png|svg|tiff|webp)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'img/[name].jpg'
+            }
+          },
+          {
+            loader: 'image-process-loader',
+            options: {
+              jpeg: {
+                progressive: true
+              },
+              presets: {
+                blur: {
+                  blur: true,
+                  jpeg: {
+                    quality: 55
+                  }
+                },
+                'good-quality': {
+                  jpeg: {
+                    quality: 80
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+```js
+require('path/to/image.jpg?preset=blur') // blur, quality: 55
+require('path/to/image.jpg?presets[]=blur&presets[]=good-quality') // blur, quality: 80; presets order matter
+require('path/to/image.jpg?presets[]=good-quality&presets[]=blur') // blur, quality: 55; presets order matter
+require('path/to/image.jpg?{preset:blur,{jpeg:{quality:40}}}') // blur, quality: 40
+```
