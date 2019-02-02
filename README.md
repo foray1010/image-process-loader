@@ -16,7 +16,6 @@ Image process loader for webpack, powered by [sharp](https://github.com/lovell/s
 
 - only support webpack `2.x` and Node.js `>=6.9` (Welcome PR if you need to use older version)
 
-
 ## Usage
 
 This loader _was not designed to stop you from doing stupid things, because that would also stop you from doing clever things._
@@ -28,6 +27,7 @@ You have full access to [sharp API](https://sharp.readthedocs.io/), take a look 
 Take an example from [sharp resize](https://sharp.readthedocs.io/en/stable/api-resize/#resize) method. Let's say I want to restrict all image's width to `200px`
 
 In `sharp`
+
 ```js
 sharp(inputBuffer)
   .resize(200)
@@ -35,6 +35,7 @@ sharp(inputBuffer)
 ```
 
 In `image-process-loader`
+
 ```js
 /* webpack.config.js */
 module.exports = {
@@ -55,6 +56,7 @@ module.exports = {
 It is okay to pass multiple arguments, just wrap your option with array.
 
 For example, if I want to resize all images to `width=200px` and `height=300px`
+
 ```js
 /* webpack.config.js */
 module.exports = {
@@ -73,6 +75,7 @@ module.exports = {
 ```
 
 And of course you can pass `sharp`'s Enums
+
 ```js
 /* webpack.config.js */
 const sharp = require('sharp')
@@ -95,9 +98,10 @@ module.exports = {
 }
 ```
 
-__One important thing to keep in mind, the order of options is exactly the same as the order of processing image__
+One important thing to keep in mind, __the order of options is exactly the same as the order of processing image__
 
 In `image-process-loader`
+
 ```js
 /* webpack.config.js */
 const sharp = require('sharp')
@@ -119,6 +123,7 @@ module.exports = {
 ```
 
 In `sharp`
+
 ```js
 sharp(inputBuffer)
   .crop(sharp.strategy.entropy)
@@ -126,9 +131,10 @@ sharp(inputBuffer)
   .toBuffer()
 ```
 
-
 ## Examples
+
 Convert all images to progressive jpeg
+
 ```js
 /* webpack.config.js */
 module.exports = {
@@ -159,6 +165,7 @@ module.exports = {
 ```
 
 Convert all icons to greyscale when in `development` mode
+
 ```js
 /* webpack.config.js */
 
