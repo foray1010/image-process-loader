@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/foray1010/image-process-loader/compare/v1.0.0...v1.1.0) (2019-02-02)
+
+
+### Features
+
+* support inline query & presets option ([@truongsinh](https://github.com/truongsinh), [@yannski](https://github.com/yannski)) ([#31](https://github.com/foray1010/image-process-loader/issues/31)) ([4f486ea](https://github.com/foray1010/image-process-loader/commit/4f486ea))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/foray1010/image-process-loader/compare/v0.1.1...v1.0.0) (2018-12-05)
 
