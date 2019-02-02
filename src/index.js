@@ -1,10 +1,10 @@
 'use strict'
 
-const coWrapper = require('./lib/coWrapper')
+const asyncWrapper = require('./lib/asyncWrapper')
 const processImage = require('./lib/processImage')
 const loaderUtils = require('loader-utils')
 
-const loader = coWrapper(function* loader(content) {
+const loader = asyncWrapper(async function loader(content) {
   const globalOptions = loaderUtils.getOptions(this);
   const resourceOptions = loaderUtils.parseQuery(this.resourceQuery || "?")
   let presetOptionsList = []
@@ -25,8 +25,8 @@ const loader = coWrapper(function* loader(content) {
   delete options.preset
   delete options.presets
   const sharpInstance = processImage(content, options)
-
-  return yield sharpInstance.toBuffer()
+  const result = await sharpInstance.toBuffer()
+  return result
 })
 loader.raw = true
 

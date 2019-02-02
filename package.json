@@ -1,8 +1,8 @@
 {
   "name": "image-process-loader",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "engines": {
-    "node": ">=6.9"
+    "node": ">=8.9"
   },
   "description": "Image process loader for webpack",
   "license": "MIT",
@@ -12,24 +12,22 @@
   "bugs": "https://github.com/foray1010/image-process-loader/issues",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint .",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.js": ["eslint --fix", "git add"]
+    "lint": "eslint ."
   },
   "peerDependencies": {
     "sharp": "*"
   },
   "dependencies": {
-    "co": "^4.6.0",
     "loader-utils": "^1.1.0"
   },
   "devDependencies": {
-    "eslint": "^4.18.2",
-    "eslint-config-foray1010": "^6.6.1",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.0",
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
+    "eslint": "^5.9.0",
+    "eslint-config-foray1010": "^6.17.4",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier-eslint-cli": "^4.7.1",
     "sharp": "*"
   }
 }
