@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "config:base",
+    ":semanticCommitTypeAll(chore)",
+    ":assignAndReview(foray1010)",
+    ":automergeMinor"
+  ],
+  "timezone": "Asia/Hong_Kong",
+  "schedule": ["after 2:00am and before 6:00am"],
+  "node": {
+    "supportPolicy": ["lts_active"]
+  },
+  "semanticCommits": true,
+  "prCreation": "not-pending"
+}
