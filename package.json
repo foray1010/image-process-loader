@@ -22,7 +22,7 @@
     "loader-utils": "^1.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "7.5.1",
+    "@commitlint/cli": "7.5.2",
     "@commitlint/config-conventional": "7.5.0",
     "eslint": "5.13.0",
     "eslint-config-foray1010": "7.0.0",
