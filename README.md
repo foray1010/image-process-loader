@@ -246,5 +246,5 @@ module.exports = {
 require('path/to/image.jpg?preset=blur') // blur, quality: 55
 require('path/to/image.jpg?presets[]=blur&presets[]=good-quality') // blur, quality: 80; presets order matter
 require('path/to/image.jpg?presets[]=good-quality&presets[]=blur') // blur, quality: 55; presets order matter
-require('path/to/image.jpg?{preset:blur,{jpeg:{quality:40}}}') // blur, quality: 40
+require('path/to/image.jpg?{preset:"blur",{jpeg:{quality:40}}}') // blur, quality: 40
 ```
