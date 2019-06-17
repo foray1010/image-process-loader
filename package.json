@@ -28,7 +28,7 @@
     "eslint-config-foray1010": "7.3.0",
     "husky": "2.4.1",
     "lint-staged": "8.2.1",
-    "prettier-eslint-cli": "4.7.1",
+    "prettier-eslint-cli": "5.0.0",
     "sharp": "*"
   }
 }
