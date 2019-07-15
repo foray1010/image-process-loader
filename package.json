@@ -22,8 +22,8 @@
     "loader-utils": "^1.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "8.0.0",
-    "@commitlint/config-conventional": "8.0.0",
+    "@commitlint/cli": "8.1.0",
+    "@commitlint/config-conventional": "8.1.0",
     "eslint": "5.16.0",
     "eslint-config-foray1010": "7.3.2",
     "husky": "3.0.0",
