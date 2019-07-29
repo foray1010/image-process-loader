@@ -26,7 +26,7 @@
     "@commitlint/config-conventional": "8.1.0",
     "eslint": "5.16.0",
     "eslint-config-foray1010": "7.3.2",
-    "husky": "3.0.1",
+    "husky": "3.0.2",
     "lint-staged": "9.2.1",
     "prettier-eslint-cli": "5.0.0",
     "sharp": "*"
