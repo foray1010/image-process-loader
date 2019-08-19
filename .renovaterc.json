@@ -1,15 +1,15 @@
 {
-  "extends": [
-    "config:base",
-    ":semanticCommitTypeAll(chore)",
-    ":assignAndReview(foray1010)",
-    ":automergeMinor"
-  ],
+  "extends": ["config:base", ":assignAndReview(foray1010)", ":automergeMinor"],
   "timezone": "Asia/Hong_Kong",
-  "schedule": ["after 2:00am and before 6:00am"],
+  "schedule": ["after 2am and before 6am"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["after 2am and before 6am on Monday"]
+  },
   "node": {
     "supportPolicy": ["lts_active"]
   },
   "semanticCommits": true,
+  "semanticCommitType": "chore",
   "prCreation": "not-pending"
 }
