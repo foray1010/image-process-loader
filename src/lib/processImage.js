@@ -10,7 +10,7 @@ module.exports = (content, query) => {
 
     const paramsBefore = Array.isArray(query[methodName]) ? query[methodName] : [query[methodName]]
 
-    const params = paramsBefore.map((key) => {
+    const params = paramsBefore.map(key => {
       const parsed = Number(key)
       if (Number.isNaN(parsed)) {
         return key
