@@ -8,7 +8,9 @@ module.exports = (content, query) => {
       throw new Error(`Method "${methodName}" is undefined`)
     }
 
-    const paramsBefore = Array.isArray(query[methodName]) ? query[methodName] : [query[methodName]]
+    const paramsBefore = Array.isArray(query[methodName])
+      ? query[methodName]
+      : [query[methodName]]
 
     const params = paramsBefore.map(key => {
       const parsed = Number(key)

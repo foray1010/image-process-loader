@@ -45,11 +45,11 @@ module.exports = {
         test: /\.(jpe?g|png|tiff|webp)$/,
         loader: 'image-process-loader',
         options: {
-          resize: 200
-        }
-      }
-    ]
-  }
+          resize: 200,
+        },
+      },
+    ],
+  },
 }
 ```
 
@@ -66,11 +66,11 @@ module.exports = {
         test: /\.(jpe?g|png|tiff|webp)$/,
         loader: 'image-process-loader',
         options: {
-          resize: [200, 300]
-        }
-      }
-    ]
-  }
+          resize: [200, 300],
+        },
+      },
+    ],
+  },
 }
 ```
 
@@ -87,18 +87,22 @@ module.exports = {
         test: /\.(jpe?g|png|tiff|webp)$/,
         loader: 'image-process-loader',
         options: {
-          resize: [200, 300, {
-            kernel: sharp.kernel.lanczos2,
-            interpolator: sharp.interpolator.nohalo
-          }]
-        }
-      }
-    ]
-  }
+          resize: [
+            200,
+            300,
+            {
+              kernel: sharp.kernel.lanczos2,
+              interpolator: sharp.interpolator.nohalo,
+            },
+          ],
+        },
+      },
+    ],
+  },
 }
 ```
 
-One important thing to keep in mind, __the order of options is exactly the same as the order of processing image__
+One important thing to keep in mind, **the order of options is exactly the same as the order of processing image**
 
 In `image-process-loader`
 
@@ -114,11 +118,11 @@ module.exports = {
         loader: 'image-process-loader',
         options: {
           crop: sharp.strategy.entropy,
-          resize: 200
-        }
-      }
-    ]
-  }
+          resize: 200,
+        },
+      },
+    ],
+  },
 }
 ```
 
@@ -146,21 +150,21 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'img/[name].jpg'
-            }
+              name: 'img/[name].jpg',
+            },
           },
           {
             loader: 'image-process-loader',
             options: {
               jpeg: {
-                progressive: true
-              }
-            }
-          }
-        ]
-      }
-    ]
-  }
+                progressive: true,
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
 }
 ```
 
@@ -174,27 +178,25 @@ const rules = [
     test: /\.png$/,
     loader: 'file-loader',
     options: {
-      name: 'img/[name].[ext]'
-    }
-  }
+      name: 'img/[name].[ext]',
+    },
+  },
 ]
 
 if (process.env.NODE_ENV === 'development') {
-  rules.push(
-    {
-      test: /\/icon.+\.png$/, // assume all icons have `icon` prefix
-      loader: 'image-process-loader',
-      options: {
-        greyscale: true
-      }
-    }
-  )
+  rules.push({
+    test: /\/icon.+\.png$/, // assume all icons have `icon` prefix
+    loader: 'image-process-loader',
+    options: {
+      greyscale: true,
+    },
+  })
 }
 
 module.exports = {
   module: {
-    rules: rules
-  }
+    rules: rules,
+  },
 }
 ```
 
@@ -211,34 +213,34 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'img/[name].jpg'
-            }
+              name: 'img/[name].jpg',
+            },
           },
           {
             loader: 'image-process-loader',
             options: {
               jpeg: {
-                progressive: true
+                progressive: true,
               },
               presets: {
                 blur: {
                   blur: true,
                   jpeg: {
-                    quality: 55
-                  }
+                    quality: 55,
+                  },
                 },
                 'good-quality': {
                   jpeg: {
-                    quality: 80
-                  }
-                }
-              }
-            }
-          }
-        ]
-      }
-    ]
-  }
+                    quality: 80,
+                  },
+                },
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
 }
 ```
 

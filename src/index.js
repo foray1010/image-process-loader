@@ -6,8 +6,9 @@ const asyncWrapper = require('./lib/asyncWrapper')
 const processImage = require('./lib/processImage')
 
 const loader = asyncWrapper(async function loader(content) {
-  const {presets: presetsOption = {}, ...globalOptions} = loaderUtils.getOptions(this) || {}
-  const {preset, presets, ...resourceOptions} = this.resourceQuery
+  const { presets: presetsOption = {}, ...globalOptions } =
+    loaderUtils.getOptions(this) || {}
+  const { preset, presets, ...resourceOptions } = this.resourceQuery
     ? loaderUtils.parseQuery(this.resourceQuery)
     : {}
 
@@ -17,7 +18,12 @@ const loader = asyncWrapper(async function loader(content) {
   const presetNames = preset ? [preset] : presets || []
   const presetOptionsList = presetNames.map(key => presetsOption[key])
 
-  const options = Object.assign({}, globalOptions, ...presetOptionsList, resourceOptions)
+  const options = Object.assign(
+    {},
+    globalOptions,
+    ...presetOptionsList,
+    resourceOptions,
+  )
 
   const sharpInstance = processImage(content, options)
   const result = await sharpInstance.toBuffer()
