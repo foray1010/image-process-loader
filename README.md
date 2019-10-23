@@ -12,7 +12,7 @@ Image process loader for webpack, powered by [sharp](https://github.com/lovell/s
 
 - supports JPEG, PNG, WebP, TIFF, GIF and SVG images, but only support output in JPEG, PNG, WebP and TIFF formats
 
-- [sharp](https://github.com/lovell/sharp) is 27x faster than [jimp](https://github.com/oliver-moran/jimp), and 4x faster than [GraphicsMagick](https://github.com/aheckmann/gm) or [ImageMagick](https://github.com/rsms/node-imagemagick) (https://sharp.readthedocs.io/en/stable/performance/)
+- [sharp](https://github.com/lovell/sharp) is 27x faster than [jimp](https://github.com/oliver-moran/jimp), and 4x faster than [GraphicsMagick](https://github.com/aheckmann/gm) or [ImageMagick](https://github.com/rsms/node-imagemagick) (<https://sharp.readthedocs.io/en/stable/performance/>)
 
 - only support webpack `2.x` and Node.js `>=6.9` (Welcome PR if you need to use older version)
 
