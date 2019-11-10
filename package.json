@@ -31,7 +31,7 @@
     "prettier": "1.18.2",
     "remark-cli": "7.0.0",
     "sharp": "*",
-    "sort-package-json": "1.22.1"
+    "sort-package-json": "1.23.1"
   },
   "peerDependencies": {
     "sharp": "*"
