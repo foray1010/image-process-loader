@@ -17,7 +17,7 @@
     "remark": "remark --frail --ignore-path=.gitignore"
   },
   "dependencies": {
-    "loader-utils": "^1.1.0"
+    "loader-utils": "^2.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
