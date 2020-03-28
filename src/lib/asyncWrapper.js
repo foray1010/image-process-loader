@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = fn =>
+module.exports = (fn) =>
   async function wrappedLoader(...args) {
     const callback = this.async()
     try {
