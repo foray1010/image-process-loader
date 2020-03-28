@@ -29,9 +29,7 @@ Take an example from [sharp resize](https://sharp.readthedocs.io/en/stable/api-r
 In `sharp`
 
 ```js
-sharp(inputBuffer)
-  .resize(200)
-  .toBuffer()
+sharp(inputBuffer).resize(200).toBuffer()
 ```
 
 In `image-process-loader`
@@ -129,10 +127,7 @@ module.exports = {
 In `sharp`
 
 ```js
-sharp(inputBuffer)
-  .crop(sharp.strategy.entropy)
-  .resize(200)
-  .toBuffer()
+sharp(inputBuffer).crop(sharp.strategy.entropy).resize(200).toBuffer()
 ```
 
 ## Examples
