@@ -8,11 +8,11 @@ yarn add -D image-process-loader sharp
 
 Image process loader for webpack, powered by [sharp](https://github.com/lovell/sharp)
 
-- supports operations like resizing, cropping, rotation, color manipulation, file type conversation and [lots more](https://sharp.readthedocs.io/)!
+- supports operations like resizing, cropping, rotation, color manipulation, file type conversation and [lots more](https://sharp.pixelplumbing.com/)!
 
 - supports JPEG, PNG, WebP, TIFF, GIF and SVG images, but only support output in JPEG, PNG, WebP and TIFF formats
 
-- [sharp](https://github.com/lovell/sharp) is 27x faster than [jimp](https://github.com/oliver-moran/jimp), and 4x faster than [GraphicsMagick](https://github.com/aheckmann/gm) or [ImageMagick](https://github.com/rsms/node-imagemagick) (<https://sharp.readthedocs.io/en/stable/performance/>)
+- [sharp](https://github.com/lovell/sharp) is 27x faster than [jimp](https://github.com/oliver-moran/jimp), and 4x faster than [GraphicsMagick](https://github.com/aheckmann/gm) or [ImageMagick](https://github.com/rsms/node-imagemagick) (<https://sharp.pixelplumbing.com/performance>)
 
 - only support webpack `2.x` and Node.js `>=6.9` (Welcome PR if you need to use older version)
 
@@ -20,11 +20,11 @@ Image process loader for webpack, powered by [sharp](https://github.com/lovell/s
 
 This loader _was not designed to stop you from doing stupid things, because that would also stop you from doing clever things._
 
-You have full access to [sharp API](https://sharp.readthedocs.io/), take a look at their documentation starting from [here](https://sharp.readthedocs.io/en/stable/api-output/#table-of-contents), and know what methods you can call
+You have full access to [sharp API](https://sharp.pixelplumbing.com/), take a look at their documentation starting from [here](https://sharp.pixelplumbing.com/api-output#table-of-contents), and know what methods you can call
 
 ---
 
-Take an example from [sharp resize](https://sharp.readthedocs.io/en/stable/api-resize/#resize) method. Let's say I want to restrict all image's width to `200px`
+Take an example from [sharp resize](https://sharp.pixelplumbing.com/api-resize#resize) method. Let's say I want to restrict all image's width to `200px`
 
 In `sharp`
 
