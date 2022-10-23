@@ -2,8 +2,8 @@
 
 const loaderUtils = require('loader-utils')
 
-const asyncWrapper = require('./lib/asyncWrapper')
-const processImage = require('./lib/processImage')
+const asyncWrapper = require('./lib/asyncWrapper.js')
+const processImage = require('./lib/processImage.js')
 
 const loader = asyncWrapper(async function loader(content) {
   const { presets: presetsOption = {}, ...globalOptions } =
