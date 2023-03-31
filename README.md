@@ -16,6 +16,14 @@ Image process loader for webpack, powered by [sharp](https://github.com/lovell/s
 
 - only support webpack `2.x` and Node.js `>=6.9` (Welcome PR if you need to use older version)
 
+## Development Setup
+
+We are using [corepack](https://nodejs.org/api/corepack.html) to manage the `yarn` version
+
+```bash
+corepack enable
+```
+
 ## Usage
 
 This loader _was not designed to stop you from doing stupid things, because that would also stop you from doing clever things._
