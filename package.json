@@ -40,7 +40,7 @@
     "pinst": "3.0.0",
     "prettier": "3.1.1",
     "remark-cli": "12.0.0",
-    "sharp": "0.33.0"
+    "sharp": "0.33.1"
   },
   "peerDependencies": {
     "sharp": "*"
