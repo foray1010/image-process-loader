@@ -29,8 +29,8 @@
     "loader-utils": "^2.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.4.4",
-    "@commitlint/config-conventional": "18.4.4",
+    "@commitlint/cli": "18.5.0",
+    "@commitlint/config-conventional": "18.5.0",
     "@foray1010/eslint-config": "12.2.0",
     "@foray1010/prettier-config": "11.0.1",
     "@foray1010/remark-preset": "10.0.0",
