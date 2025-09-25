@@ -45,7 +45,7 @@
   "peerDependencies": {
     "sharp": "*"
   },
-  "packageManager": "yarn@4.9.4",
+  "packageManager": "yarn@4.10.2",
   "engines": {
     "node": "^18.12.0 || >=20.9.0"
   }
