@@ -26,7 +26,7 @@
     "remark": "remark --frail --ignore-path=node_modules/@foray1010/remark-preset/remarkignore --ignore-path-resolve-from=cwd --silently-ignore"
   },
   "dependencies": {
-    "loader-utils": "^2.0.0"
+    "loader-utils": "^3.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "19.8.1",
